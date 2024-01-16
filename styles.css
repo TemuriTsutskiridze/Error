@@ -75,6 +75,7 @@ body {
    
 }
 
+/* \\aq iwyeba filtrebi მარკეტი,აპლიკაცია, ხელოვნური ინტელექტი და ასშმ \\ */
 .btn-filter{
     text-align: center;
     margin-top: 64px;
@@ -127,7 +128,7 @@ border: none; /* Remove the border */
     color: #15C972;
 font-family: FiraGO;
 font-size: 16px;
-
+font-style: normal;
 font-weight: 500;
 line-height: 16px; /* 133.333% */
 }
@@ -203,4 +204,128 @@ font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: 16px; /* 133.333% */
+}
+
+
+/* ეხლა ვიწყებ ქარდებს */
+.blog-card{
+    width: 80%;
+    height: 1000px;
+    display: flex;
+    margin-top: 64px;
+    margin-left: auto;
+     margin-right: auto;
+     display: flex;
+     justify-content: space-between;
+     gap: 35px;
+}
+
+.card-1{
+    width: 408px;
+    height: 568px;
+    border-radius: 20px;
+
+}
+
+.card-body-p{
+    margin-top: 20px;
+}
+.card-body-p h1{
+    color: #1A1A1F;
+font-family: FiraGO;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 125% */
+}
+
+.card-body-p p{
+    color: #85858D;
+font-family: FiraGO;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 133.333% */
+margin-top: 7px;
+}
+
+.card-body-h1{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.card-body-btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.btn-filter1-btn{
+    width: 70px;
+    height: 28px;
+    border-radius: 30px;
+background: rgba(255, 184, 47, 0.08);
+border: none;
+}
+.btn-filter1-btn h4{
+    color: #D6961C;
+    font-family: FiraGO;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+    border: none;
+}
+
+.btn-filter2-btn{
+    width: 70px;
+    height: 28px;
+    border-radius: 30px;
+background: rgba(28, 214, 125, 0.08);
+border: none;
+margin-left: -20px;
+}
+
+.btn-filter2-btn h4{
+    color: #15C972;
+font-family: FiraGO;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+.btn-filter3-btn{
+    width: 140px;
+    height: 28px;
+    border-radius: 30px;
+background: rgba(177, 28, 214, 0.08);
+margin-right: 30px;
+
+border: none;
+} 
+
+.btn-filter3-btn h4{
+    color: #B71FDD;
+font-family: FiraGO;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+.card-body-pp{
+    margin-top: 20px;
+}
+
+.clicl-here-btn{
+    color: #5D37F3;
+    font-family: FiraGO;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    border: none;
+    margin-top: 20px;
+
 }
