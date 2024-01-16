@@ -126,3 +126,24 @@ ul {
   line-height: 20px;
   padding-left: 12px;
 }
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.description_text {
+  color: #1a1a1f;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#description_Input {
+  width: 600px;
+  height: 124px;
+  border-radius: 12px;
+  border: 1px solid #e4e3eb;
+  background: #fcfcfd;
+  padding-left: 16px;
+}
