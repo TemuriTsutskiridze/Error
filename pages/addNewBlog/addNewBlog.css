@@ -85,7 +85,12 @@ h2 {
   text-decoration-line: underline;
 }
 
-.author {
+.author_title {
+  display: flex;
+  gap: 24px;
+}
+
+.subdiv {
   display: flex;
   flex-direction: column;
   gap: 8px;
