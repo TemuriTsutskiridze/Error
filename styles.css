@@ -74,3 +74,133 @@ body {
     flex-shrink: 0;
    
 }
+
+.btn-filter{
+    text-align: center;
+    margin-top: 64px;
+   width: 120vh;
+   height: 35px;
+   margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    
+    
+  
+}
+
+.btn-filter1{
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+background: rgba(255, 184, 47, 0.08);
+border: none; /* Remove the border */
+
+}
+
+.btn-filter1 h5{
+    color: #D6961C;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500px;
+line-height: 16px; /* 133.333% */
+  border: none; /* Remove the border */
+
+
+
+}
+
+
+.btn-filter2{
+
+    width: 200px;
+height: 32px;
+border-radius: 30px;
+background: rgba(28, 214, 125, 0.08);
+border: none; /* Remove the border */
+
+}
+
+.btn-filter2 h5{
+    color: #15C972;
+font-family: FiraGO;
+font-size: 16px;
+
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+
+
+
+
+.btn-filter3{
+
+    width: 300px;
+    height: 32px;
+    border-radius: 30px;
+    background: rgba(177, 28, 214, 0.08);
+    border: none; /* Remove the border */
+}
+
+.btn-filter3 h5{
+    color: #B71FDD;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+.btn-filter4{
+    height: 32px;
+    width: 130px;
+    border-radius: 30px;
+background: rgba(250, 87, 87, 0.08);
+border: none; /* Remove the border */
+}
+
+.btn-filter4 h5{
+    color: #DC2828;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+.btn-filter5{
+    width: 160px;
+    height: 32px;
+    border-radius: 30px;
+background: rgba(112, 207, 37, 0.08);
+border: none; /* Remove the border */
+}
+.btn-filter5 h5{
+    color: #60BE16;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+.btn-filter6{
+   width: 160px;
+    height: 32px;
+    border-radius: 30px;
+background: rgba(8, 210, 174, 0.08);
+border: none; /* Remove the border */
+
+}
+
+.btn-filter6 h5{
+    color: #1AC7A8;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
