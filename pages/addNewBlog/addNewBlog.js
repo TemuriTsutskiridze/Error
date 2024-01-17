@@ -29,3 +29,72 @@ dropArea.addEventListener("drop", function (e) {
   inputFile.files = e.dataTransfer.files;
   uploadImage();
 });
+
+// ///////////////////////////////////////
+
+let authorInput = document.querySelector(".author_");
+
+authorInput.addEventListener("input", function () {
+  let userInput = authorInput.value;
+  validInput(userInput);
+});
+
+function validInput(input) {
+  let minFourSymbol = document.querySelector(".minFourSymbol");
+  let minTwoWord = document.querySelector(".minTwoWord");
+  let georgianSymbols = document.querySelector(".georgianSymbols");
+
+  minFourSymbol.style.color = "black";
+  minTwoWord.style.color = "black";
+  georgianSymbols.style.color = "black";
+
+  let georgianLetters = [
+    "ა",
+    "ბ",
+    "გ",
+    "დ",
+    "ე",
+    "ვ",
+    "ზ",
+    "თ",
+    "ი",
+    "კ",
+    "ლ",
+    "მ",
+    "ნ",
+    "ო",
+    "პ",
+    "ჟ",
+    "რ",
+    "ს",
+    "ტ",
+    "უ",
+    "ფ",
+    "ქ",
+    "ღ",
+    "ყ",
+    "შ",
+    "ჩ",
+    "ც",
+    "ძ",
+    "წ",
+    "ჭ",
+    "ხ",
+    "ჯ",
+    "ჰ",
+  ];
+
+  if (input.length < 4) {
+    minFourSymbol.style.color = "red";
+  }
+
+  if (input.split(" ").length < 2) {
+    minTwoWord.style.color = "red";
+  }
+
+  for (letter of input) {
+    if (!georgianLetters.includes(letter)) {
+      georgianSymbols.style.color = "red";
+    }
+  }
+}
