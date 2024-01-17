@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../common.css" />
     <link rel="stylesheet" href="addNewBlog.css" />
     <script src="addNewBlog.js"></script>
-    <title>Document</title>
+    <title>Add New Blog</title>
   </head>
   <body>
     <header>
@@ -18,8 +18,8 @@
         <h2>ბლოგის დამატება</h2>
 
         <div class="content">
-          <div class="photo">
-            <span class="photo-text">ატვირთეთ ფოტო</span>
+          <div class="subdiv">
+            <span class="text">ატვირთეთ ფოტო</span>
             <label for="input-file" id="drop-area">
               <input type="file" accept="image/*" id="input-file" hidden />
               <div id="image-view">
@@ -32,12 +32,12 @@
             </label>
           </div>
 
-          <div class="author_title">
+          <div class="two-div">
             <div class="subdiv">
               <p class="text">ავტორი *</p>
               <input
                 type="text"
-                id="author_title_Input"
+                class="author_ Input"
                 placeholder="შეიყვანეთ ავტორი"
               />
               <ul>
@@ -51,7 +51,7 @@
               <p class="text">სათური *</p>
               <input
                 type="text"
-                id="author_title_Input"
+                class="title_ Input"
                 placeholder="შეიყვანეთ სათაური"
               />
               <ul>
@@ -60,11 +60,11 @@
             </div>
           </div>
 
-          <div class="description">
-            <p>აღწერა *</p>
+          <div class="subdiv">
+            <p class="text">აღწერა *</p>
             <input
               type="text"
-              id="description_Input"
+              class="description_ Input"
               placeholder="შეიყვანეთ აღწერა"
             />
             <ul>
