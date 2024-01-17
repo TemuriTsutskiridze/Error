@@ -1,9 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -124,13 +118,19 @@ ul {
 }
 
 .publish-date_ {
-  background-image: url("./images/calendar.png");
+  background-image: url(./images/calendar.png);
   background-repeat: no-repeat;
   background-position: 16px center;
 }
 
 .publish-date_::placeholder {
   padding-left: 28px;
+}
+
+.category_ {
+  background-image: url(./images/arrow-down.png);
+  background-repeat: no-repeat;
+  background-position: 252px center;
 }
 
 #upload {

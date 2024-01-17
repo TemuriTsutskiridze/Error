@@ -5,7 +5,7 @@ const imageView = document.getElementById("image-view");
 inputFile.addEventListener("change", uploadImage);
 
 function uploadImage() {
-  let imgLink = URL.createObjectURL(inputFiles.files[0]);
+  let imgLink = URL.createObjectURL(inputFile.files[0]);
   imageView.style.backgroundImage = `url(${imgLink})`;
   imageView.textContent = "";
 }
@@ -15,7 +15,7 @@ dropArea.addEventListener("dragover", function (e) {
 });
 
 dropArea.addEventListener("drop", function (e) {
-  e.preventDefault();
+  e.preventDefault(); // Prevent the default behavior
   inputFile.files = e.dataTransfer.files;
   uploadImage();
 });
