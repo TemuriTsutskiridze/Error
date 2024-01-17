@@ -42,6 +42,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: 110px;
 }
 
 .content {
@@ -120,6 +121,16 @@ ul {
 .description_ {
   width: 600px;
   height: 124px;
+}
+
+.publish-date_ {
+  background-image: url("./images/calendar.png");
+  background-repeat: no-repeat;
+  background-position: 16px center;
+}
+
+.publish-date_::placeholder {
+  padding-left: 28px;
 }
 
 #upload {
