@@ -149,3 +149,21 @@ ul {
   font-weight: 500;
   line-height: 20px;
 }
+
+.imail-text {
+  color: #ea1919;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  align-items: center;
+  display: none;
+}
+
+.imail_text {
+  width: 260px;
+}
+
+.red-circle {
+  margin-bottom: 20px;
+  margin-right: 8px;
+}

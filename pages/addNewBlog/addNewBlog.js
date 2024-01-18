@@ -135,3 +135,20 @@ function validInputs(input, inputField) {
     inputField.style.color = "#85858d";
   }
 }
+
+let imailInput = document.querySelector(".imail_");
+
+imailInput.addEventListener("input", function () {
+  let userInput = imailInput.value.trim();
+  validImail(userInput);
+});
+
+function validImail(input) {
+  let errorText = document.getElementsByClassName("imail-text")[0];
+  let last = input.split("@");
+  if (last[1] !== "redberry.ge") {
+    errorText.style.display = "flex";
+  } else {
+    errorText.style.display = "none";
+  }
+}
