@@ -30,12 +30,12 @@ dropArea.addEventListener("drop", function (e) {
   uploadImage();
 });
 
-// ///////////////////////////////////////
+///////////////validation/////////////////////////
 
 let authorInput = document.querySelector(".author_");
 
 authorInput.addEventListener("input", function () {
-  let userInput = authorInput.value;
+  let userInput = authorInput.value.trim();
   validInput(userInput);
 });
 
@@ -49,6 +49,7 @@ function validInput(input) {
   georgianSymbols.style.color = "black";
 
   let georgianLetters = [
+    " ",
     "ა",
     "ბ",
     "გ",
@@ -86,15 +87,21 @@ function validInput(input) {
 
   if (input.length < 4) {
     minFourSymbol.style.color = "red";
+  } else {
+    minFourSymbol.style.color = "green";
   }
 
   if (input.split(" ").length < 2) {
     minTwoWord.style.color = "red";
+  } else {
+    minTwoWord.style.color = "green";
   }
 
   for (letter of input) {
     if (!georgianLetters.includes(letter)) {
       georgianSymbols.style.color = "red";
+    } else {
+      georgianSymbols.style.color = "green";
     }
   }
 }
