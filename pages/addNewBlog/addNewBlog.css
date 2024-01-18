@@ -131,6 +131,9 @@ ul {
   background-image: url(./images/arrow-down.png);
   background-repeat: no-repeat;
   background-position: 252px center;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
 }
 
 #upload {
@@ -166,4 +169,11 @@ ul {
 .red-circle {
   margin-bottom: 20px;
   margin-right: 8px;
+}
+
+.category {
+  color: #85858d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
 }

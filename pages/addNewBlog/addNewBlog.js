@@ -13,21 +13,25 @@ function uploadImage() {
   }
 }
 
-function deleteImage() {
-  imageView.style.display = "none"; // Hide the image view
-  inputFile.value = ""; // Clear the file input
+function hideImage() {
+  imageView.style.width = "600px";
+  imageView.style.height = "56px";
+  imageView.style.background = "#F2F2FA;";
+  imageView.textContent = "image";
 }
 
 const dropArea = document.getElementById("drop-area");
 
 dropArea.addEventListener("dragover", function (e) {
   e.preventDefault();
+  hideImage();
 });
 
 dropArea.addEventListener("drop", function (e) {
   e.preventDefault();
   inputFile.files = e.dataTransfer.files;
   uploadImage();
+  hideImage();
 });
 
 ///////////////validation/////////////////////////
@@ -162,3 +166,57 @@ let publishDate = document.querySelector(".publish-date_");
 publishDate.addEventListener("input", function () {
   publishDate.style.background = "white";
 });
+
+let categoryInput = document.querySelector(".category_");
+let div = document.querySelector(".categories");
+
+categoryInput.addEventListener("click", function () {
+  categories();
+  div.style.display = "flex";
+  div.style.flexDirection = `column`;
+  div.style.gap = "4px";
+  div.style.alignItems = "center";
+  div.style.borderRadius = "10px";
+});
+
+let response;
+let data;
+
+async function categories() {
+  response = await fetch("https://george.pythonanywhere.com/api/categories/");
+  data = await response.json();
+
+  data.forEach((element) => {
+    let newButton = document.createElement("button");
+    newButton.textContent = element.title;
+    newButton.style.color = element.text_color;
+    newButton.style.backgroundColor = element.background_color;
+    newButton.style.width = `200px`;
+    newButton.style.height = `30px`;
+    newButton.style.borderRadius = `30px`;
+
+    newButton.addEventListener("click", function () {
+      let xButton = document.createElement("button");
+      xButton.textContent = newButton.textContent + " X";
+      let buttonStyles = window.getComputedStyle(newButton);
+
+      for (let style in buttonStyles) {
+        if (!isNaN(style) || typeof style === "function") {
+          continue;
+        }
+        xButton.style.setProperty(style, buttonStyles.getPropertyValue(style));
+      }
+
+      categoryInput.innerHTML += xButton.outerHTML;
+
+      let paragraph = document.querySelector(".category");
+      paragraph.style.display = "none";
+
+      // xButton.addEventListener("click", function () {
+      //   categoryInput.removeChild(xButton);
+      // });
+    });
+
+    div.appendChild(newButton);
+  });
+}
