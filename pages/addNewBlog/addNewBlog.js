@@ -156,3 +156,9 @@ function validImail(input) {
     errorText.style.display = "none";
   }
 }
+
+let publishDate = document.querySelector(".publish-date_");
+
+publishDate.addEventListener("input", function () {
+  publishDate.style.background = "white";
+});
