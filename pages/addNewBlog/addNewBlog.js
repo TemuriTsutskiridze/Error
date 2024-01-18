@@ -44,10 +44,6 @@ function validInput(input) {
   let minTwoWord = document.querySelector(".minTwoWord");
   let georgianSymbols = document.querySelector(".georgianSymbols");
 
-  minFourSymbol.style.color = "black";
-  minTwoWord.style.color = "black";
-  georgianSymbols.style.color = "black";
-
   let georgianLetters = [
     " ",
     "ა",
@@ -103,5 +99,11 @@ function validInput(input) {
     } else {
       georgianSymbols.style.color = "green";
     }
+  }
+
+  if (input.length === 0) {
+    minFourSymbol.style.color = "#85858d";
+    minTwoWord.style.color = "#85858d";
+    georgianSymbols.style.color = "#85858d";
   }
 }
