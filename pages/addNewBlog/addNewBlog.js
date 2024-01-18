@@ -107,3 +107,31 @@ function validInput(input) {
     georgianSymbols.style.color = "#85858d";
   }
 }
+
+let titleInput = document.querySelector(".title_");
+let descriptionInput = document.querySelector(".description_");
+
+titleInput.addEventListener("input", function () {
+  let userInput = titleInput.value.trim();
+  let minTwoSymbolsTitle = document.getElementsByClassName("minTwoSymbols")[0];
+  validInputs(userInput, minTwoSymbolsTitle);
+});
+
+descriptionInput.addEventListener("input", function () {
+  let userInput = descriptionInput.value.trim();
+  let minTwoSymbolsDescription =
+    document.getElementsByClassName("minTwoSymbols")[1];
+  validInputs(userInput, minTwoSymbolsDescription);
+});
+
+function validInputs(input, inputField) {
+  if (input.length < 2) {
+    inputField.style.color = "red";
+  } else {
+    inputField.style.color = "green";
+  }
+
+  if (input.length === 0) {
+    inputField.style.color = "#85858d";
+  }
+}
