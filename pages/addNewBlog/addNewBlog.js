@@ -151,4 +151,8 @@ function validImail(input) {
   } else {
     errorText.style.display = "none";
   }
+
+  if (input.length === 0) {
+    errorText.style.display = "none";
+  }
 }
