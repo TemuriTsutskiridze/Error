@@ -1,15 +1,28 @@
+function restart() {
+  let image = localStorage.getItem("img");
+  imageView.defaultValue = image;
+  let author = localStorage.getItem("author");
+  authorInput.defaultValue = author;
+  let title = localStorage.getItem("title");
+  titleInput.defaultValue = title;
+  let description = localStorage.getItem("description");
+  descriptionInput.defaultValue = description;
+  let publishDate = localStorage.getItem("publish-date");
+  publishDateInput.defaultValue = publishDate;
+  let imail = localStorage.getItem("imail");
+  imailInput.defaultValue = imail;
+}
+
 const inputFile = document.getElementById("input-file");
 const imageView = document.getElementById("image-view");
-const uploadedImage = document.getElementById("uploaded-image");
 
-inputFile.addEventListener("change", uploadImage);
+inputFile.addEventListener("change", hideImage);
 
-function uploadImage() {
+function getImage() {
   const file = inputFile.files[0];
   if (file) {
     let imgLink = URL.createObjectURL(file);
-    uploadedImage.src = imgLink;
-    imageView.style.display = "flex"; // Show the image view
+    return imgLink;
   }
 }
 
@@ -17,21 +30,20 @@ function hideImage() {
   imageView.style.width = "600px";
   imageView.style.height = "56px";
   imageView.style.background = "#F2F2FA;";
-  imageView.textContent = "image";
+  imageView.textContent = `${getImage()}`;
 }
 
 const dropArea = document.getElementById("drop-area");
 
-dropArea.addEventListener("dragover", function (e) {
-  e.preventDefault();
-  hideImage();
+["drop", "dragenter", "dragleave", "dragover"].forEach((eventName) => {
+  dropArea.addEventListener(eventName, (e) => {
+    e.preventDefault();
+  });
 });
 
 dropArea.addEventListener("drop", function (e) {
-  e.preventDefault();
-  inputFile.files = e.dataTransfer.files;
-  uploadImage();
   hideImage();
+  localStorage.setItem("img", getImage());
 });
 
 ///////////////validation/////////////////////////
@@ -41,6 +53,7 @@ let authorInput = document.querySelector(".author_");
 authorInput.addEventListener("input", function () {
   let userInput = authorInput.value.trim();
   validInput(userInput);
+  localStorage.setItem("author", userInput);
 });
 
 function validInput(input) {
@@ -119,6 +132,7 @@ titleInput.addEventListener("input", function () {
   let userInput = titleInput.value.trim();
   let minTwoSymbolsTitle = document.getElementsByClassName("minTwoSymbols")[0];
   validInputs(userInput, minTwoSymbolsTitle);
+  localStorage.setItem("title", userInput);
 });
 
 descriptionInput.addEventListener("input", function () {
@@ -126,6 +140,7 @@ descriptionInput.addEventListener("input", function () {
   let minTwoSymbolsDescription =
     document.getElementsByClassName("minTwoSymbols")[1];
   validInputs(userInput, minTwoSymbolsDescription);
+  localStorage.setItem("description", userInput);
 });
 
 function validInputs(input, inputField) {
@@ -145,6 +160,7 @@ let imailInput = document.querySelector(".imail_");
 imailInput.addEventListener("input", function () {
   let userInput = imailInput.value.trim();
   validImail(userInput);
+  localStorage.setItem("imail", userInput);
 });
 
 function validImail(input) {
@@ -161,10 +177,11 @@ function validImail(input) {
   }
 }
 
-let publishDate = document.querySelector(".publish-date_");
+let publishDateInput = document.querySelector(".publish-date_");
 
-publishDate.addEventListener("input", function () {
-  publishDate.style.background = "white";
+publishDateInput.addEventListener("input", function () {
+  publishDateInput.style.background = "white";
+  localStorage.setItem("publish-date", publishDateInput.value);
 });
 
 let categoryInput = document.querySelector(".category_");
@@ -220,3 +237,5 @@ async function categories() {
     div.appendChild(newButton);
   });
 }
+
+restart();
