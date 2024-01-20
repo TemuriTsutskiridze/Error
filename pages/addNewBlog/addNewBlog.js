@@ -1,16 +1,45 @@
 function restart() {
   let image = localStorage.getItem("img");
-  imageView.defaultValue = image;
+  if (image) {
+    imageView.defaultValue = image;
+  } else {
+    imageView.defaultValue = "";
+  }
+
   let author = localStorage.getItem("author");
-  authorInput.defaultValue = author;
+  if (author) {
+    authorInput.defaultValue = author;
+  } else {
+    authorInput.defaultValue = "";
+  }
+
   let title = localStorage.getItem("title");
-  titleInput.defaultValue = title;
+  if (title) {
+    titleInput.defaultValue = title;
+  } else {
+    titleInput.defaultValue = "";
+  }
+
   let description = localStorage.getItem("description");
-  descriptionInput.defaultValue = description;
+  if (description) {
+    descriptionInput.defaultValue = description;
+  } else {
+    descriptionInput.defaultValue = "";
+  }
+
   let publishDate = localStorage.getItem("publish-date");
-  publishDateInput.defaultValue = publishDate;
+  if (publishDate) {
+    publishDateInput.defaultValue = publishDate;
+  } else {
+    publishDateInput.defaultValue = "";
+  }
+
   let imail = localStorage.getItem("imail");
-  imailInput.defaultValue = imail;
+  if (imail) {
+    imailInput.defaultValue = imail;
+  } else {
+    imailInput.defaultValue = "";
+  }
 }
 
 const inputFile = document.getElementById("input-file");
@@ -184,7 +213,7 @@ publishDateInput.addEventListener("input", function () {
   localStorage.setItem("publish-date", publishDateInput.value);
 });
 
-let categoryInput = document.querySelector(".category_");
+let categoryInput = document.querySelector(".arrow-down");
 let div = document.querySelector(".categories");
 
 categoryInput.addEventListener("click", function () {
@@ -228,10 +257,15 @@ async function categories() {
 
       let paragraph = document.querySelector(".category");
       paragraph.style.display = "none";
+      categoryInput.style.display = "none";
+      let theInput = document.querySelector(".category_");
+      theInput.style.gap = "4px";
 
-      // xButton.addEventListener("click", function () {
-      //   categoryInput.removeChild(xButton);
-      // });
+      theInput.append(xButton);
+
+      xButton.addEventListener("click", (e) => {
+        e.target.remove();
+      });
     });
 
     div.appendChild(newButton);

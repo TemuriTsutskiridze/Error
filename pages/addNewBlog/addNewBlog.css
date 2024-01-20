@@ -7,7 +7,6 @@ body {
 }
 
 header {
-  width: 1440px;
   height: 80px;
   border-bottom: 1px solid #e4e3eb;
   background: #fff;
@@ -128,12 +127,14 @@ ul {
 }
 
 .category_ {
-  background-image: url(./images/arrow-down.png);
-  background-repeat: no-repeat;
-  background-position: 252px center;
   display: flex;
   align-items: center;
   overflow-y: hidden;
+  gap: 100px;
+}
+
+.arrow-down {
+  cursor: pointer;
 }
 
 #upload {
