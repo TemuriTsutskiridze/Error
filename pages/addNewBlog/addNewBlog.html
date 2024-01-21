@@ -5,8 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../common.css" />
     <link rel="stylesheet" href="addNewBlog.css" />
-    <script src="addNewBlog.js"></script>
-    <title>Document</title>
+    <script src="addNewBlog.js" defer></script>
+    <title>Add New Blog</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img class="redberry" src="./images/LOGO-02 3.png" alt="redberry logo" />
+    </header>
+    <main>
+      <img class="arrow" src="./images/Arrow.png" alt="arrow" />
+      <div class="container">
+        <h2>ბლოგის დამატება</h2>
+
+        <div class="content">
+          <div class="subdiv">
+            <span class="text">ატვირთეთ ფოტო</span>
+            <label for="input-file" id="drop-area">
+              <input type="file" accept="image/*" id="input-file" hidden />
+              <div id="image-view">
+                <img
+                  id="uploaded-image"
+                  src="./images/folder-add.png"
+                  alt="folder logo"
+                />
+                <p class="drop_file">
+                  ჩააგდეთ ფაილი აქ ან
+                  <span class="choose_file">აირჩიეთ ფაილი</span>
+                </p>
+              </div>
+            </label>
+          </div>
+
+          <div class="two-div">
+            <div class="subdiv">
+              <p class="text">ავტორი *</p>
+              <input
+                type="text"
+                class="author_ Input"
+                placeholder="შეიყვანეთ ავტორი"
+              />
+              <ul>
+                <li class="minFourSymbol">მინიმუმ 4 სიმბოლო</li>
+                <li class="minTwoWord">მინიმუმ ორი სიტყვა</li>
+                <li class="georgianSymbols">მხოლოდ ქართული სიმბოლოები</li>
+              </ul>
+            </div>
+
+            <div class="subdiv">
+              <p class="text">სათური *</p>
+              <input
+                type="text"
+                class="title_ Input"
+                placeholder="შეიყვანეთ სათაური"
+              />
+              <ul>
+                <li class="minTwoSymbols">მინიმუმ ორი სიმბოლო</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subdiv">
+            <p class="text">აღწერა *</p>
+            <input
+              type="text"
+              class="description_ Input"
+              placeholder="შეიყვანეთ აღწერა"
+            />
+            <ul>
+              <li class="minTwoSymbols">მინუმუმ ორი სიმბოლო</li>
+            </ul>
+          </div>
+
+          <div class="two-div">
+            <div class="subdiv">
+              <p class="text">გამოქვეყნების თარიღი *</p>
+              <input
+                type="text"
+                class="publish-date_ Input"
+                placeholder="17/1/2024"
+              />
+            </div>
+
+            <div class="subdiv">
+              <p class="text">კატეგორია *</p>
+              <div class="category_ Input">
+                <p class="category">აირჩიეთ კატეგორია</p>
+                <img
+                  class="arrow-down"
+                  src="./images/arrow-down.png"
+                  alt="arrow-down"
+                />
+              </div>
+              <div class="categories" hidden></div>
+            </div>
+          </div>
+
+          <div class="subdiv">
+            <p class="text">ელ-ფოსტა</p>
+            <input
+              type="text"
+              class="imail_ Input"
+              placeholder="Example@redberry.ge" 
+            />
+            <div class="imail-text">
+              <img
+                class="red-circle"
+                src="./images/info-circle.png"
+                alt="info circle"
+              />
+              <span class="imail_text"
+                >მეილი უნდა მთავრდებოდეს @redberry.ge-ით</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <button id="upload">გამოქვეყნება</button>
+      </div>
+    </main>
+  </body>
 </html>
