@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Add a font-family for better cross-browser consistency */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background: #FFF;
+    padding: 10px;
+}
+
+.header img {
+    width: 150px;
+    height: 24px;
+    margin-left:70px ;
+}
+
+.btn1 {
+    display: flex;
+    align-items: center;
+    padding: 7px 20px;
+    border: 0;
+    
+    outline: 0;
+    border-radius: 8px;
+    background: #5D37F3;
+    color: white;
+    
+    margin-right: 76px; /* Adjust this value to your preference */
+}
+
+
+.conteiner{
+    background: #F3F2FA;
+    width: 100%;
+    height: 100%;
+
+}
+.box1{
+    width: 80%;
+    height: 230px;
+   
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.box1 h1{
+    color: #1A1A1F;
+    font-family: FiraGO;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px; /* 112.5% */
+   
+}
+
+.images{
+    width: 624px;
+    height: 200px;
+    flex-shrink: 0;
+   
+}
+
+/* \\aq iwyeba filtrebi მარკეტი,აპლიკაცია, ხელოვნური ინტელექტი და ასშმ \\ */
+.btn-filter{
+    text-align: center;
+    margin-top: 64px;
+   width: 120vh;
+   height: 35px;
+   margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    
+    
+  
+}
+
+.btn-filter1{
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+background: rgba(255, 184, 47, 0.08);
+border: none; /* Remove the border */
+
+}
+
+.btn-filter1 h5{
+    color: #D6961C;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500px;
+line-height: 16px; /* 133.333% */
+  border: none; /* Remove the border */
+
+
+
+}
+
+
+.btn-filter2{
+
+    width: 200px;
+height: 32px;
+border-radius: 30px;
+background: rgba(28, 214, 125, 0.08);
+border: none; /* Remove the border */
+
+}
+
+.btn-filter2 h5{
+    color: #15C972;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+
+
+
+
+.btn-filter3{
+
+    width: 300px;
+    height: 32px;
+    border-radius: 30px;
+    background: rgba(177, 28, 214, 0.08);
+    border: none; /* Remove the border */
+}
+
+.btn-filter3 h5{
+    color: #B71FDD;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+.btn-filter4{
+    height: 32px;
+    width: 130px;
+    border-radius: 30px;
+background: rgba(250, 87, 87, 0.08);
+border: none; /* Remove the border */
+}
+
+.btn-filter4 h5{
+    color: #DC2828;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+.btn-filter5{
+    width: 160px;
+    height: 32px;
+    border-radius: 30px;
+background: rgba(112, 207, 37, 0.08);
+border: none; /* Remove the border */
+}
+.btn-filter5 h5{
+    color: #60BE16;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+.btn-filter6{
+   width: 160px;
+    height: 32px;
+    border-radius: 30px;
+background: rgba(8, 210, 174, 0.08);
+border: none; /* Remove the border */
+
+}
+
+.btn-filter6 h5{
+    color: #1AC7A8;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+
+/* ეხლა ვიწყებ ქარდებს */
+.blog-card{
+    width: 80%;
+
+    display: flex;
+    margin-top: 64px;
+    margin-left: auto;
+     margin-right: auto;
+     display: flex;
+     justify-content: space-between;
+     gap: 35px;
+     flex-wrap: wrap;
+}
+
+.card-1{
+    width: 408px;
+    
+    border-radius: 20px;
+
+}
+
+.card-body-p{
+    margin-top: 20px;
+}
+.card-body-p h1{
+    color: #1A1A1F;
+font-family: FiraGO;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 125% */
+}
+
+.card-body-p p{
+    color: #85858D;
+font-family: FiraGO;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 133.333% */
+margin-top: 7px;
+}
+
+.card-body-h1{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.card-body-btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.btn-filter1-btn{
+    width: 70px;
+    height: 28px;
+    border-radius: 30px;
+background: rgba(255, 184, 47, 0.08);
+border: none;
+}
+.btn-filter1-btn h4{
+    color: #D6961C;
+    font-family: FiraGO;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+    border: none;
+}
+
+.btn-filter2-btn{
+    width: 70px;
+    height: 28px;
+    border-radius: 30px;
+background: rgba(28, 214, 125, 0.08);
+border: none;
+margin-left: -20px;
+}
+
+.btn-filter2-btn h4{
+    color: #15C972;
+font-family: FiraGO;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+.btn-filter3-btn{
+    width: 140px;
+    height: 28px;
+    border-radius: 30px;
+background: rgba(177, 28, 214, 0.08);
+margin-right: 30px;
+
+border: none;
+} 
+
+.btn-filter3-btn h4{
+    color: #B71FDD;
+font-family: FiraGO;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 133.333% */
+}
+
+.card-body-pp{
+    margin-top: 20px;
+}
+
+.clicl-here-btn{
+    color: #5D37F3;
+    font-family: FiraGO;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    border: none;
+    margin-top: 20px;
+
+}

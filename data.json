@@ -1,0 +1,81 @@
+
+ 
+     [
+      {
+        "id": 1,
+        "image": "/photo/unsplash_lmCajireIn8.png",
+        "title": "ნია გოგსაძე",
+        "publish_date": "02.11.2023",
+        "description": "EOMM-ის მრჩეველთა საბჭოს ნინო ეგაძე შეუერთდა",
+        
+        
+        "categories": [
+          {
+            "id": 1,
+            "name": "ნია გოგსაძე",
+            "text_color": "#ffffff",
+            "background_color": "#000000"
+          }
+        ],
+        "author": "გელა გელაშვილი"
+      },
+
+
+      {
+        "id": 2,
+        "title": "თორნიკე მამასახლისი",
+        "publish_date": "02.11.2023",
+        "description": "მოსმენა ყველს უფრო გემრიელს ხდის?",
+        "image": "/photo/unsplash_newhL3aprGk.png",
+        
+        "categories": [
+          {
+            "id": 1,
+            "name": "თრნიკე მამასახლისი",
+            "text_color": "#ffffff",
+            "background_color": "#000000"
+          }
+        ],
+        "author": "გელა გელაშვილი"
+      },
+
+      {
+        "id": 3,
+        "title": "კობა ბელთაძე",
+        "description": "მობილური ფოტოგრაფიის კონკურსის გამარჯვებულთა ვინაობა ცნობილია. მ...",
+        "image": "/photo/coma1.png",
+        "publish_date": "2023-11-19 00:00:00",
+        "categories": [
+          {
+            "id": 1,
+            "name": "Category name",
+            "text_color": "#ffffff",
+            "background_color": "#000000"
+          }
+        ],
+        "author": "გელა გელაშვილი"
+      },
+      {
+        "id": 3,
+        "title": "კობა ბელთაძე",
+        "description": "მობილური ფოტოგრაფიის კონკურსის გამარჯვებულთა ვინაობა ცნობილია. მ...",
+        "image": "/photo/unsplash_lmCajireIn8.png",
+        "publish_date": "2023-11-19 00:00:00",
+        "categories": [
+          {
+            "id": 1,
+            "name": "Category name",
+            "text_color": "#ffffff",
+            "background_color": "#000000"
+          }
+        ],
+        "author": "გელა გელაშვილი"
+      }
+      
+     
+    ]
+  
+
+  
+  
+  
