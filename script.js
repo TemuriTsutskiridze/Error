@@ -1,3 +1,4 @@
+
 const blogcardjs=document.querySelector(".blog-card")
 async function renderDATA(){
     const response =await fetch("./data.json")
@@ -44,3 +45,4 @@ function seeall(id){
 console.log(id)
 }
 renderDATA()
+
