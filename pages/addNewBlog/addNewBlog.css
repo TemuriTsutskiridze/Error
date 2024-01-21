@@ -17,12 +17,14 @@ header {
 
 main {
   display: flex;
+  justify-content: center;
 }
 
 .arrow {
   width: 44px;
   height: 44px;
-  margin: 0 240px 0 76px;
+  position: absolute;
+  left: 75px;
 }
 
 h2 {

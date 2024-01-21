@@ -1,40 +1,41 @@
+let image = localStorage.getItem("img");
+let author = localStorage.getItem("author");
+let title = localStorage.getItem("title");
+let description = localStorage.getItem("description");
+let publishDate = localStorage.getItem("publish-date");
+let imail = localStorage.getItem("imail");
+
 function restart() {
-  let image = localStorage.getItem("img");
   if (image) {
     imageView.defaultValue = image;
   } else {
     imageView.defaultValue = "";
   }
 
-  let author = localStorage.getItem("author");
   if (author) {
     authorInput.defaultValue = author;
   } else {
     authorInput.defaultValue = "";
   }
 
-  let title = localStorage.getItem("title");
   if (title) {
     titleInput.defaultValue = title;
   } else {
     titleInput.defaultValue = "";
   }
 
-  let description = localStorage.getItem("description");
   if (description) {
     descriptionInput.defaultValue = description;
   } else {
     descriptionInput.defaultValue = "";
   }
 
-  let publishDate = localStorage.getItem("publish-date");
   if (publishDate) {
     publishDateInput.defaultValue = publishDate;
   } else {
     publishDateInput.defaultValue = "";
   }
 
-  let imail = localStorage.getItem("imail");
   if (imail) {
     imailInput.defaultValue = imail;
   } else {
@@ -49,10 +50,14 @@ inputFile.addEventListener("change", hideImage);
 
 function getImage() {
   const file = inputFile.files[0];
-  if (file) {
-    let imgLink = URL.createObjectURL(file);
-    return imgLink;
-  }
+  let reader = new FileReader();
+
+  reader.onload = function () {
+    let base64String = reader.result;
+    localStorage.setItem("img", base64String);
+  };
+
+  reader.readAsDataURL(file);
 }
 
 function hideImage() {
@@ -216,21 +221,36 @@ publishDateInput.addEventListener("input", function () {
 let categoryInput = document.querySelector(".arrow-down");
 let div = document.querySelector(".categories");
 
+let dropDown = true;
+
 categoryInput.addEventListener("click", function () {
-  categories();
-  div.style.display = "flex";
-  div.style.flexDirection = `column`;
-  div.style.gap = "4px";
-  div.style.alignItems = "center";
-  div.style.borderRadius = "10px";
+  if (dropDown) {
+    categories();
+    div.style.display = "flex";
+    div.style.flexDirection = `column`;
+    div.style.gap = "4px";
+    div.style.alignItems = "center";
+    div.style.borderRadius = "10px";
+
+    categoryInput.style.transform = "rotate(180deg)";
+    dropDown = false;
+  }
+  if ((dropDown = false)) {
+    div.style.display = "none";
+    categoryInput.style.transform = "rotate(180deg)";
+    dropDown = true;
+  }
 });
 
 let response;
 let data;
 
+let categoryArr = [];
+
 async function categories() {
   response = await fetch("https://george.pythonanywhere.com/api/categories/");
   data = await response.json();
+  console.log(data);
 
   data.forEach((element) => {
     let newButton = document.createElement("button");
@@ -257,11 +277,13 @@ async function categories() {
 
       let paragraph = document.querySelector(".category");
       paragraph.style.display = "none";
-      categoryInput.style.display = "none";
+      // categoryInput.style.display = "none";
       let theInput = document.querySelector(".category_");
       theInput.style.gap = "4px";
 
       theInput.append(xButton);
+      categoryArr.push(element);
+      console.log(categoryArr);
 
       xButton.addEventListener("click", (e) => {
         e.target.remove();
